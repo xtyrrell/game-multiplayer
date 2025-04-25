@@ -14,7 +14,7 @@ export default {
         return new Response("Missing `name` in request body", { status: 400 });
       }
 
-      const date = new Date().toISOString().split("T")[0];
+      const date = Math.floor(Date.now() / 1000); // Unix timestamp (seconds)
       await env.DB.prepare("INSERT INTO feeds (name, date) VALUES (?1, ?2)")
         .bind(name, date)
         .run();
