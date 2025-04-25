@@ -1,0 +1,16 @@
+{
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "name": "game-multiplayer",
+  "upload_source_maps": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "ec9bd251-a3e9-46d8-8e93-c1a60285cb8b",
+      "database_name": "divine-shadow-65eb-d1"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
