@@ -24,6 +24,7 @@ export default {
 
     // Handle GET / - list all feeds
     if (request.method === "GET") {
+      // TODO: Only get feeds from the last few minutes OR just get the last 5 feeds
       const { results } = await env.DB.prepare("SELECT * FROM feeds").all();
       return new Response(JSON.stringify(results), {
         headers: {
